@@ -126,6 +126,8 @@ pub enum Event {
     ResponseReceived(network::events::ResponseReceivedEvent),
     #[serde(rename = "Log.entryAdded")]
     LogEntryAdded(logs::events::EntryAddedEvent),
+    #[serde(rename = "Runtime.exceptionThrown")]
+    RuntimeExceptionThrown(runtime::events::ExceptionThrownEvent),
 }
 
 #[derive(Deserialize, Debug, Clone)]
